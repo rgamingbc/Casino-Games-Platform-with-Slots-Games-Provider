@@ -1,0 +1,292 @@
+.floating-telegram {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(100px) scale(0.8);
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.floating-telegram.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.telegram-float-btn {
+  background: linear-gradient(135deg, #1DA1F2 0%, #0088cc 30%, #229ED9 70%, #54C7EC 100%);
+  border: none;
+  border-radius: 50px;
+  padding: 18px 28px;
+  cursor: pointer;
+  box-shadow: 
+    0 12px 40px rgba(29, 161, 242, 0.35),
+    0 6px 20px rgba(0, 0, 0, 0.15),
+    0 2px 8px rgba(29, 161, 242, 0.2),
+    inset 0 2px 0 rgba(255, 255, 255, 0.25),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: white;
+  text-decoration: none;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(20px) saturate(180%);
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  min-width: 200px;
+}
+
+.telegram-float-btn::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF6B6B 100%);
+  border-radius: 50px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.telegram-float-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.1) 80%,
+    transparent 100%
+  );
+  transition: left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: shimmer 3s infinite;
+}
+
+.telegram-float-btn:hover::before {
+  left: 100%;
+  animation: none;
+}
+
+.telegram-float-btn:hover {
+  transform: translateY(-8px) scale(1.08);
+  box-shadow: 
+    0 20px 60px rgba(29, 161, 242, 0.5),
+    0 10px 30px rgba(0, 0, 0, 0.2),
+    0 4px 12px rgba(29, 161, 242, 0.3),
+    inset 0 3px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #4FC3F7 0%, #1DA1F2 30%, #0088cc 70%, #64B5F6 100%);
+}
+
+.telegram-float-btn:hover::after {
+  opacity: 1;
+}
+
+.telegram-float-btn:active {
+  transform: translateY(-2px) scale(1.02);
+  transition: all 0.1s ease;
+}
+
+.telegram-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 100%);
+  border-radius: 50%;
+  padding: 8px;
+  animation: iconFloat 4s ease-in-out infinite;
+  position: relative;
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.telegram-icon svg {
+  width: 22px;
+  height: 22px;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+  color: #FFFFFF;
+}
+
+.telegram-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.telegram-label {
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 3px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #E3F2FD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.telegram-handle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.95);
+  background: linear-gradient(135deg, #FFFFFF 0%, #B3E5FC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.telegram-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(135deg, rgba(29, 161, 242, 0.4) 0%, rgba(84, 199, 236, 0.2) 100%);
+  transform: translate(-50%, -50%);
+  animation: advancedPulse 4s infinite;
+  pointer-events: none;
+}
+
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-4px) rotate(3deg) scale(1.05);
+  }
+  50% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  75% {
+    transform: translateY(2px) rotate(-2deg) scale(0.98);
+  }
+}
+
+@keyframes advancedPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.7;
+  }
+  33% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.4;
+  }
+  66% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .floating-telegram {
+    bottom: 24px;
+    right: 24px;
+  }
+  
+  .telegram-float-btn {
+    padding: 16px 22px;
+    border-radius: 40px;
+    gap: 14px;
+    min-width: 180px;
+  }
+  
+  .telegram-icon {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+  }
+  
+  .telegram-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .telegram-label {
+    font-size: 0.8rem;
+  }
+  
+  .telegram-handle {
+    font-size: 0.85rem;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+  .floating-telegram {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .telegram-float-btn {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    justify-content: center;
+    padding: 0;
+    gap: 0;
+    min-width: unset;
+    box-shadow: 
+      0 8px 25px rgba(29, 161, 242, 0.4),
+      0 4px 15px rgba(0, 0, 0, 0.2),
+      0 2px 8px rgba(29, 161, 242, 0.3);
+  }
+  
+  .telegram-text {
+    display: none;
+  }
+  
+  .telegram-icon {
+    width: 38px;
+    height: 38px;
+    padding: 8px;
+  }
+  
+  .telegram-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .telegram-pulse {
+    border-radius: 50%;
+  }
+  
+  .telegram-float-btn:hover {
+    transform: translateY(-6px) scale(1.1);
+    box-shadow: 
+      0 15px 35px rgba(29, 161, 242, 0.5),
+      0 8px 20px rgba(0, 0, 0, 0.25),
+      0 4px 12px rgba(29, 161, 242, 0.4);
+  }
+}

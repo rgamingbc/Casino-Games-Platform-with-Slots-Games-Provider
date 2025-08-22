@@ -1,0 +1,55 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #ffffff;
+  background: linear-gradient(135deg, #1a0000 0%, #330000 50%, #000000 100%);
+  min-height: 100vh;
+}
+
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a0000 0%, #330000 50%, #000000 100%);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Buttons */
+.cta-button, .submit-btn {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
+  color: #ffd700;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid #ffd700;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+}
+
+.cta-button:hover, .submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.5);
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%);
+  border-color: #fbbf24;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,147 @@
+.features {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #330000 0%, #1a0000 50%, #000000 100%);
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #ffd700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-card {
+  background: linear-gradient(135deg, #1a0000 0%, #330000 100%);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  text-align: center;
+  border: 2px solid #dc2626;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.feature-card:hover::before {
+  left: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(220, 38, 38, 0.3);
+  border-color: #ffd700;
+}
+
+.feature-card .feature-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
+}
+
+/* Special styling for Telegram Demo card */
+.feature-card:nth-child(4) {
+  border-color: #0088cc;
+  background: linear-gradient(135deg, #001a2e 0%, #003d5c 100%);
+}
+
+.feature-card:nth-child(4):hover {
+  border-color: #00b3ff;
+  box-shadow: 0 20px 40px rgba(0, 136, 204, 0.4);
+}
+
+.feature-card:nth-child(4) .feature-icon {
+  filter: drop-shadow(0 0 10px rgba(0, 136, 204, 0.5));
+}
+
+.telegram-contact {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(0, 136, 204, 0.2);
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #0088cc;
+}
+
+.telegram-contact strong {
+  color: #00b3ff;
+  font-size: 1.1rem;
+  display: block;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffd700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.feature-card p {
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.feature-points {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.feature-points li {
+  background: rgba(0, 0, 0, 0.5);
+  margin: 0.5rem 0;
+  padding: 0.8rem 1rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  color: #ffffff;
+  border-left: 4px solid #dc2626;
+  border: 1px solid #333;
+  position: relative;
+}
+
+.feature-points li::before {
+  content: '✓';
+  color: #ffd700;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .features {
+    padding: 60px 0;
+  }
+  
+  .features h2 {
+    font-size: 2.2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .feature-card {
+    padding: 2rem 1.5rem;
+  }
+}

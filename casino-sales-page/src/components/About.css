@@ -1,0 +1,126 @@
+.about {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #1a0000 0%, #330000 50%, #1a0000 100%);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-text h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: #ffd700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.stat {
+  text-align: center;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(51, 0, 0, 0.7) 100%);
+  border-radius: 15px;
+  border: 2px solid #dc2626;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.2);
+}
+
+.stat h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffd700;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.stat p {
+  color: #cccccc;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 50%, #1a0000 100%);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffd700;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(220, 38, 38, 0.4);
+  border: 3px solid #ffd700;
+}
+
+.placeholder-icon {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+}
+
+.image-placeholder p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 0;
+  }
+  
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .about-text h2 {
+    font-size: 2.2rem;
+  }
+  
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .stat {
+    padding: 1rem;
+  }
+  
+  .stat h3 {
+    font-size: 2rem;
+  }
+  
+  .image-placeholder {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .placeholder-icon {
+    font-size: 4rem;
+  }
+}
