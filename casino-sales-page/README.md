@@ -158,6 +158,8 @@ This project is licensed under the MIT License.
 
 For any questions or suggestions, please contact us through the website's contact form.
 
+**Telegram Contact**: @rgamingbc
+
 ---
 
 Built with ❤️ for the gaming industry
