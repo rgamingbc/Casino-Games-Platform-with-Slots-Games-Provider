@@ -1,7 +1,5 @@
 # Casino-Games-Platform-with-Slots-Games-Provider
-Casino Gaming Platform with Slots Games Provider by Node.js
-
-# Casino Gaming Platform with Slots Games Provider using Node.js
+Casino Games Platform with Slots Games Provider by Node.js Web3/Web2 SOL Slot Games Live Games Sport Games
 
 ### Project Overview
 This project is a comprehensive casino gaming platform built with Node.js, featuring integration with various slots games providers and Web3 capabilities. The platform supports traditional payment methods as well as cryptocurrency transactions, providing a seamless gaming experience for users worldwide.
