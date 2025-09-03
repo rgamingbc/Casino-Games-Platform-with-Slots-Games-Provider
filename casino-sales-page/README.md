@@ -1,4 +1,4 @@
-# 🎰 Casino Gaming Platform - Sales Page
+# 🎰 Casino Games Platform Web3 SOL Web 2 Slot Games Sport Games Live Games
 
 A modern, responsive sales page for a premium casino gaming platform built with React.js. Features a professional dark red/black/gold color scheme inspired by luxury casino aesthetics.
 
