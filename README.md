@@ -3,8 +3,6 @@ Casino Gaming Platform with Slots Games Provider by Node.js
 
 # Casino Gaming Platform with Slots Games Provider using Node.js
 
-## English Version
-
 ### Project Overview
 This project is a comprehensive casino gaming platform built with Node.js, featuring integration with various slots games providers and Web3 capabilities. The platform supports traditional payment methods as well as cryptocurrency transactions, providing a seamless gaming experience for users worldwide.
 
@@ -50,8 +48,6 @@ We welcome contributions to this project. Please feel free to submit pull reques
 This project is licensed under the MIT License.
 
 ---
-
-## 中文版本
 
 ### 項目概述
 這是一個使用 Node.js 構建的綜合賭場遊戲平台，集成了各種老虎機遊戲供應商和 Web3 功能。該平台支持傳統支付方式和加密貨幣交易，為全球用戶提供無縫的遊戲體驗。
